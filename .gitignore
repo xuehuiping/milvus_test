@@ -2,3 +2,8 @@
 /.settings/
 /.classpath
 /.project
+/.idea/
+*/.DS_Store
+*/.idea
+*.DS_Store
+*/__pycache__

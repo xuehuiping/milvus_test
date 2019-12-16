@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 import io.milvus.client.ConnectFailedException;
 import io.milvus.client.ConnectParam;
 import io.milvus.client.CreateIndexParam;
+import io.milvus.client.DescribeIndexResponse;
+import io.milvus.client.GetTableRowCountResponse;
 import io.milvus.client.HasTableResponse;
 import io.milvus.client.Index;
 import io.milvus.client.IndexType;
@@ -27,7 +29,7 @@ import io.milvus.client.SearchResponse.QueryResult;
 import io.milvus.client.TableSchema;
 
 public class MyClient {
-	private final String host = "123.57.219.113";
+	private final String host = "182.92.233.254";
 	private final String port = "19530";
 	private MilvusClient client;
 	private String tableName;
@@ -143,6 +145,10 @@ public class MyClient {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	    // Get current row count of table
+	    GetTableRowCountResponse getTableRowCountResponse = client.getTableRowCount(tableName);
+	    System.out.println(getTableRowCountResponse);
+	    
 
 		final IndexType indexType = IndexType.IVF_SQ8;
 		Index index = new Index.Builder().withIndexType(indexType).build();
@@ -150,8 +156,11 @@ public class MyClient {
 		Response createIndexResponse = client.createIndex(createIndexParam);
 		System.out.println(createIndexResponse);
 
+	    // Describe the index for your table
+	    DescribeIndexResponse describeIndexResponse = client.describeIndex(tableName);
+	    System.out.println(describeIndexResponse);
 	}
-
+	
 	private void checkTable() {
 		HasTableResponse hasTableResponse = client.hasTable(tableName);
 		System.out.println(hasTableResponse);

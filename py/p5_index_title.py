@@ -6,9 +6,9 @@ import sys
 import time
 import numpy as np
 from milvus import Milvus, IndexType
+from my_config import _HOST
 
 table_name = 'kuakua_table'
-_HOST = '182.92.233.254'
 _PORT = '19530'
 _DIM = 100
 

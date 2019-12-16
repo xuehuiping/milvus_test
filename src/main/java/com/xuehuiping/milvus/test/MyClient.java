@@ -29,7 +29,7 @@ import io.milvus.client.SearchResponse.QueryResult;
 import io.milvus.client.TableSchema;
 
 public class MyClient {
-	private final String host = "182.92.233.254";
+	private final String host = MyConfig.HOST;
 	private final String port = "19530";
 	private MilvusClient client;
 	private String tableName;

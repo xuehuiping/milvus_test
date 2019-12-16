@@ -8,16 +8,16 @@
 这是官网给的例子
 '''
 
-
 import sys
 #  import numpy as np
 import random
 from milvus import Milvus, IndexType, MetricType
 import time
+from my_config import _HOST
 
 # Milvus server IP address and port.
 # You may need to change _HOST and _PORT accordingly.
-_HOST = '182.92.233.254'
+
 _PORT = '19530'  # default value
 
 # Vector parameters

@@ -28,11 +28,6 @@
 			<version>1.2.12</version>
 		</dependency>
 		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.7</version>
-		</dependency>
-		<dependency>
 			<groupId>io.milvus</groupId>
 			<artifactId>milvus-sdk-java</artifactId>
 			<version>0.2.2</version>

@@ -307,4 +307,4 @@ Server connected.
 
 和ElasticSearch的效果对比：
 
-![](2019-12-17-09-30-27.png)
+![](https://github.com/xuehuiping/milvus_test/blob/master/2019-12-17-09-30-27.png)
